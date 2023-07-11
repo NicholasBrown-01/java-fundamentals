@@ -1,9 +1,10 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
 
-        //Pluralize Method
+        // Pluralize Method
 
         Scanner scanner = new Scanner(System.in);
 
@@ -14,17 +15,49 @@ public class Main {
         int userNumber = Integer.valueOf(scanner.nextLine());
 
         pluralize(userWord, userNumber);
-        
+        flipNHeads();
+        clock();
+
     }
 
     static void pluralize(String userWord, int userNumber) {
-    
+
         if (userNumber > 1 || userNumber == 0) {
-            System.out.println("I own "+userNumber+" "+userWord+"s.");
-            
+            System.out.println("I own " + userNumber + " " + userWord + "s.");
+
         } else {
-            System.out.println("I own "+userNumber+" "+userWord+".");
+            System.out.println("I own " + userNumber + " " + userWord + ".");
         }
-    
+
     }
+
+    static void flipNHeads() {
+
+        // FlipNHeads Method
+
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+
+        int headsCounter = 0;
+        int totalCounter = 0;
+
+        System.out.println("How many Heads in a row would you like to see before the program ends?");
+        int userHeads = Integer.valueOf(scanner.nextLine());
+
+        while (headsCounter < userHeads) {
+            int flip = random.nextInt(2) +1;
+
+            if(flip==1) {
+                System.out.println("Heads");
+                headsCounter++;
+                totalCounter++;
+            } else {
+                System.out.println("Tails");
+                headsCounter = 0;
+                totalCounter++;
+            }
+        }
+        System.out.println("It took "+totalCounter+" flips to flip "+userHeads+" in a row.");
+    }
+
 }
