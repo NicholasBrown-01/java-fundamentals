@@ -47,7 +47,7 @@ public class Main {
         int userHeads = Integer.valueOf(scanner.nextLine());
 
         while (headsCounter < userHeads) {
-            int flip = random.nextInt(2) + 1;
+            int flip = random.nextInt(2);
 
             if (flip == 1) {
                 System.out.println("Heads");
