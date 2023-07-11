@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Random;
 
 public class Main {
@@ -45,9 +47,9 @@ public class Main {
         int userHeads = Integer.valueOf(scanner.nextLine());
 
         while (headsCounter < userHeads) {
-            int flip = random.nextInt(2) +1;
+            int flip = random.nextInt(2) + 1;
 
-            if(flip==1) {
+            if (flip == 1) {
                 System.out.println("Heads");
                 headsCounter++;
                 totalCounter++;
@@ -57,7 +59,25 @@ public class Main {
                 totalCounter++;
             }
         }
-        System.out.println("It took "+totalCounter+" flips to flip "+userHeads+" in a row.");
+        System.out.println("It took " + totalCounter + " flips to flip " + userHeads + " in a row.");
+    }
+
+    static void clock() {
+
+        
+        System.out.println("You must enter \"Ctrl + C\" or Stop via the IDE to end this time counting program.");
+        String previousTime = "";
+        
+        while (true) {
+            LocalDateTime now = LocalDateTime.now();
+            String time = now.format(DateTimeFormatter.ofPattern("HH:mm:ss"));
+
+            if (!time.equals(previousTime)) {
+                System.out.println(time);
+                previousTime = time;
+            }
+        }
+
     }
 
 }
