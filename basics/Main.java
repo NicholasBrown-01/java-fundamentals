@@ -3,6 +3,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        //Pluralize Method
+
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Please provide an animal (Ex: Dog, Cat etc):");
