@@ -13,7 +13,7 @@ public class Main {
         System.out.println("Please provide an animal (Ex: Dog, Cat etc):");
         String userWord = String.valueOf(scanner.nextLine());
 
-        System.out.println("Please input any number");
+        System.out.println("Please input a number:");
         int userNumber = Integer.valueOf(scanner.nextLine());
 
         pluralize(userWord, userNumber);
