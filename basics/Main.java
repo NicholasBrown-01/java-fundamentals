@@ -64,6 +64,8 @@ public class Main {
 
     static void clock() {
 
+        // Clock Method
+
         
         System.out.println("You must enter \"Ctrl + C\" or Stop via the IDE to end this time counting program.");
         String previousTime = "";
