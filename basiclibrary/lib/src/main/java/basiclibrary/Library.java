@@ -26,9 +26,10 @@ public class Library {
     // Contains Duplicates Method
     public boolean containsDuplicatesMethod(int[] firstArray) {
 
-        // This still does not test the whole array. Only the index after it.
-        for (int i = 0; i < firstArray.length - 1; i++) {
-            if (firstArray[i] == firstArray[i + 1]) {
+        // Now completely iterates through the array with a nested loop. Help from gpt.
+        for (int i = 0; i < firstArray.length; i++) {
+            for (int j = i + 1; j < firstArray.length; j++)
+            if (firstArray[i] == firstArray[j]) {
                 return true;
             }
 

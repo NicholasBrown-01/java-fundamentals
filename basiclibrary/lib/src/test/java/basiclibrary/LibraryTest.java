@@ -29,7 +29,7 @@ class LibraryTest {
 
         // Arrange
         Library sut = new Library();
-        int[] testArray = {1, 2, 2, 3};
+        int[] testArray = {1, 2, 3, 4, 2};
         //Act
         boolean result = sut.containsDuplicatesMethod(testArray);
         //Assert
