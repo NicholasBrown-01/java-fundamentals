@@ -17,3 +17,11 @@ Methods:
 - Contains Duplicates
 - Calculating Averages
 - Arrays of Arrays
+
+## Lab03
+<br>
+
+Methods:
+- Maps
+- Tallying Election
+- File I/O
