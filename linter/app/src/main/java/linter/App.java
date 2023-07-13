@@ -79,7 +79,7 @@ public class App {
                     lineErrorMap.put(lineNumber, true);
                     System.out.println("Line " + lineNumber + ": Missing semicolon");
 
-                    //Removed Unneccessary HashMap so that errors now print at the end of each iteration and thus in order.
+                    //Removed Unnecessary HashMap so that errors now print at the end of each iteration and thus in order.
                 }
                 lineNumber++;
             }
