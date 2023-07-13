@@ -77,14 +77,11 @@ public class App {
                         !currentLine.contains("else") &&
                         !currentLine.endsWith(";")) {
                     lineErrorMap.put(lineNumber, true);
+                    System.out.println("Line " + lineNumber + ": Missing semicolon");
+
+                    //Removed Unneccessary HashMap so that errors now print at the end of each iteration and thus in order.
                 }
                 lineNumber++;
-            }
-
-            for (Map.Entry<Integer, Boolean> entry : lineErrorMap.entrySet()) { //https://docs.oracle.com/javase/8/docs/api/java/util/Map.html
-                if (entry.getValue()) { //https://www.educative.io/answers/what-is-the-attributegetvalue-method-in-java
-                    System.out.println("Line " + entry.getKey() + ": Missing semicolon");
-                }
             }
         } catch (IOException e) {
             System.out.println("Error reading the file.");
