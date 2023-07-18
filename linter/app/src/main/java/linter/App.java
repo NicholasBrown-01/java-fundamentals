@@ -16,45 +16,10 @@ import java.util.*;
 public class App {
 
     public static void main(String[] args) {
-        List<String> votes = new ArrayList<>(); //https://canvas.instructure.com/courses/7139363/assignments/38486896?return_to=https%3A%2F%2Fcanvas.instructure.com%2Fcalendar%23view_name%3Dmonth%26view_start%3D2023-07-12
-        votes.add("Bush");
-        votes.add("Bush");
-        votes.add("Bush");
-        votes.add("Shrub");
-        votes.add("Hedge");
-        votes.add("Shrub");
-        votes.add("Bush");
-        votes.add("Hedge");
-        votes.add("Bush");
-
-        String winner = tally(votes);
-        System.out.println(winner + " received the most votes!");
 
         jsScannerTool(args);
 
 
-    }
-    public static String tally(List<String> votes) {
-        HashMap<String, Integer> voteCounts = new HashMap<>(); //https://github.com/codefellows/seattle-code-java-401d18/tree/main/class-03/demo
-        for (String vote : votes) { //https://www.youtube.com/watch?v=t8mmNbgKA8w
-            if (voteCounts.containsKey(vote)) { //https://www.programiz.com/java-programming/library/hashmap/containskey
-                voteCounts.put(vote, voteCounts.get(vote) + 1); //https://stackoverflow.com/questions/60614781/difference-between-hashmaps-put-and-add
-            } else {
-                voteCounts.put(vote, 1);
-            }
-        }
-
-        String winner = null;
-        int maxVotes = 0;
-
-        for (Map.Entry<String, Integer> entry : voteCounts.entrySet()) { //https://www.geeksforgeeks.org/map-entry-interface-java-example/
-            if (winner == null || entry.getValue() > maxVotes) {
-                winner = entry.getKey();
-                maxVotes = entry.getValue(); //overall calculation of this corrected by GPT
-            }
-        }
-
-        return winner;
     }
 
     // Long story short this was done with tons of help from TA's, Google, Teamwork, and GPT

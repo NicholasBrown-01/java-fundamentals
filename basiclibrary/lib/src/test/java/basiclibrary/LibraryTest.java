@@ -3,9 +3,11 @@
  */
 package basiclibrary;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-import java.util.Arrays;
+
+import java.util.*;
 
 class LibraryTest {
     @Test void rollMethodTEST() {
@@ -60,6 +62,8 @@ class LibraryTest {
         System.out.println(Arrays.toString(returnedArray));
     }
 
+    /////////////// LAB 03 ///////////////////
+
     @Test void weatherArrayMissingTempsTEST() {
 
         //Arrange
@@ -85,5 +89,25 @@ class LibraryTest {
         String result = sut.weatherArrayMissingTemps(MonthTemperatures);
         System.out.println("here are my results: " + result);
         assertEquals(expectedResult,  result);
+    }
+
+    @Test
+    @DisplayName("Voting Test is as follows:")
+    void tallyVoteTEST() {
+        //Arrange
+        List<String> votes = new ArrayList<>();
+        //Act
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Shrub");
+        votes.add("Hedge");
+        votes.add("Shrub");
+        votes.add("Bush");
+        votes.add("Hedge");
+        votes.add("Bush");
+        //Assert
+        assertEquals("Bush", Library.tally(votes));
+        System.out.println("Person with most votes: " +Library.tally(votes));
     }
 }
