@@ -8,29 +8,25 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
-import java.util.*;
 
 public class App {
 
     public static void main(String[] args) {
-
         jsScannerTool(args);
-
-
     }
 
     // Long story short this was done with tons of help from TA's, Google, Teamwork, and GPT
-    public static void jsScannerTool(String[] args) {
+    public static ArrayList<String> jsScannerTool(String[] args) {
         Path gatesPath = Paths.get("C:\\cmder\\Code401\\java-fundamentals\\linter\\app\\src\\main\\resources\\gates.js");
         System.out.println(gatesPath.toAbsolutePath());
 
+        ArrayList<String> errors = new ArrayList<>();
+
         try {
             Scanner scanner = new Scanner(Files.newBufferedReader(gatesPath));
-
-            HashMap<Integer, Boolean> lineErrorMap = new HashMap<>();
 
             int lineNumber = 1;
             while (scanner.hasNextLine()) {
@@ -41,15 +37,14 @@ public class App {
                         !currentLine.contains("if") && //https://www.javatpoint.com/java-string-contains
                         !currentLine.contains("else") &&
                         !currentLine.endsWith(";")) {
-                    lineErrorMap.put(lineNumber, true);
-                    System.out.println("Line " + lineNumber + ": Missing semicolon");
-
-                    //Removed Unnecessary HashMap so that errors now print at the end of each iteration and thus in order.
+                    errors.add("Line " + lineNumber + ": Missing semicolon");
                 }
                 lineNumber++;
             }
         } catch (IOException e) {
-            System.out.println("Error reading the file.");
         }
+        return errors;
     }
 }
+
+

@@ -3,19 +3,41 @@
  */
 package linter;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void votingCountTEST() {
-        App classUnderTest = new App();
+    @Test
+    @DisplayName("Scanning File for Single Error:")
+    void jsScannerTestForSingleError() {
+        //Arrange
+        App sut = new App();
 
-        //Will hopefully figure out how to test this. Too tired..
-//        ...must sleep...
-//        ...darker..
-//        ..dark...
-//        ...d...
-//        ............
+        //Act
+        ArrayList<String> result = sut.jsScannerTool(new String[]{});
+
+        //Assert
+        assertTrue(result.size() >= 1);
+        System.out.println("Scanner found more than 1 errors: " +result);
 
     }
+    @Test
+    @DisplayName("Scanning File for multiple errors:")
+    void jsScannerTestForMultipleErrors() {
+        //Arrange
+        App sut = new App();
+
+        //Act
+        ArrayList<String> result = sut.jsScannerTool(new String[]{});
+
+        //Assert
+        assertEquals(46, result.size());
+        System.out.println("Scanner found total of 46 errors: "+result.size() + " True");
+
+    }
+
 }
