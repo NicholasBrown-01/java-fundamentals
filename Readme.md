@@ -33,3 +33,4 @@ Architecture
 
 - Test are in the RestaurantTEST.java file.
 
+- Help was mainly from Tony (TA) in regards to testing and review Array!
