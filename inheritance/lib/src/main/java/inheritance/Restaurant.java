@@ -9,13 +9,15 @@ public class Restaurant {
     public float starRating;
     public int totalStarReviews;
     public float avgStarRating;
+    public char $;
 
     //Constructor
     public Restaurant() {
     }
 
-    public Restaurant(String name) {
+    public Restaurant(String name, char $) {
         this.name = name;
+        this.$ = $;
         this.reviews = new ArrayList<>();
     }
 
@@ -69,6 +71,18 @@ public class Restaurant {
         this.reviews = reviews;
     }
 
+    public void setStarRating(float starRating) {
+        this.starRating = starRating;
+    }
+
+    public char get$() {
+        return $;
+    }
+
+    public void set$(char $) {
+        this.$ = $;
+    }
+
     @Override
     public String toString() {
         return "Restaurant{" +
@@ -77,6 +91,7 @@ public class Restaurant {
                 ", starRating=" + starRating +
                 ", totalStarReviews=" + totalStarReviews +
                 ", avgStarRating=" + avgStarRating +
+                ", $=" + $ +
                 '}';
     }
 }

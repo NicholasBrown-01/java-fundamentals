@@ -10,7 +10,7 @@ class RestaurantTest {
     @DisplayName("Instantiate a New Restaurant")
     void createNewRestaurantTEST() {
         //Arrange
-        Restaurant sut = new Restaurant("Testing Name");
+        Restaurant sut = new Restaurant("Testing Name", '$');
         //Act
         //Assert
         assertEquals(sut.getClass(), Restaurant.class);
