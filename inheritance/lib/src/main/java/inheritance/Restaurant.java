@@ -1,32 +1,32 @@
 package inheritance;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Restaurant {
     //Properties
     private String name;
-    private boolean haveFood;
-    private int menuItems;
-    private int tablesAvail;
-    private List<Review> reviews; //Fun Fact:Using List lets me choose what type later such as Array, ArrayList, Stack, Linked etc.
+    public ArrayList<Review> reviews = new ArrayList<>();
+    public float starRating;
+    public int totalStarReviews;
+    public float avgStarRating;
 
     //Constructor
     public Restaurant() {
-        this.reviews = new ArrayList<>();
     }
 
-    public Restaurant(String name, boolean haveFood, int menuItems, int tablesAvail) {
+    public Restaurant(String name) {
         this.name = name;
-        this.haveFood = haveFood;
-        this.menuItems = menuItems;
-        this.tablesAvail = tablesAvail;
         this.reviews = new ArrayList<>();
     }
 
-    public void addReview(Review review) {
+    public Review addReview(Review review) {
         this.reviews.add(review);
+        this.starRating += review.stars;
+        this.totalStarReviews++;
+        this.avgStarRating = (float) starRating / totalStarReviews;
+        return review;
     }
+
 
     // Getters and Setters
     public String getName() {
@@ -37,38 +37,46 @@ public class Restaurant {
         this.name = name;
     }
 
-    public boolean isHaveFood() {
-        return haveFood;
+    public float getStarRating() {
+        return starRating;
     }
 
-    public void setHaveFood(boolean haveFood) {
-        this.haveFood = haveFood;
+    public void setStarRating(int starRating) {
+        this.starRating = starRating;
     }
 
-    public int getMenuItems() {
-        return menuItems;
+    public int getTotalStarReviews() {
+        return totalStarReviews;
     }
 
-    public void setMenuItems(int menuItems) {
-        this.menuItems = menuItems;
+    public void setTotalStarReviews(int totalStarReviews) {
+        this.totalStarReviews = totalStarReviews;
     }
 
-    public int getTablesAvail() {
-        return tablesAvail;
+    public float getAvgStarRating() {
+        return avgStarRating;
     }
 
-    public void setTablesAvail(int tablesAvail) {
-        this.tablesAvail = tablesAvail;
+    public void setAvgStarRating(float avgStarRating) {
+        this.avgStarRating = avgStarRating;
+    }
+
+    public ArrayList<Review> getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(ArrayList<Review> reviews) {
+        this.reviews = reviews;
     }
 
     @Override
     public String toString() {
         return "Restaurant{" +
                 "name='" + name + '\'' +
-                ", haveFood=" + haveFood +
-                ", menuItems=" + menuItems +
-                ", tablesAvail=" + tablesAvail +
                 ", reviews=" + reviews +
+                ", starRating=" + starRating +
+                ", totalStarReviews=" + totalStarReviews +
+                ", avgStarRating=" + avgStarRating +
                 '}';
     }
 }
