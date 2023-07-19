@@ -4,13 +4,12 @@ public class Review {
     // Properties
     private String body;
     private String author;
-    private float stars;
-    private Restaurant restaurant;
+    public float stars;
+    public Restaurant restaurant;
 
     //Constructor
 
     public Review (){
-
     }
 
     public Review(String body, String author, float stars, Restaurant restaurant) {
@@ -19,6 +18,8 @@ public class Review {
         this.stars = stars;
         this.restaurant = restaurant;
     }
+
+    // Getters and Setters
 
     public String getBody() {
         return body;
@@ -42,7 +43,6 @@ public class Review {
                 "body='" + body + '\'' +
                 ", author='" + author + '\'' +
                 ", stars=" + stars +
-                ", restaurant=" + restaurant +
                 '}';
     }
 }
