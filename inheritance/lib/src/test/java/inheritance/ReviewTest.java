@@ -1,9 +1,8 @@
 package inheritance;
 
+import inheritance.Businesses.Restaurant;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
-import java.sql.SQLOutput;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -13,7 +12,7 @@ class ReviewTest {
     @DisplayName("Add Review Test")
     void addReviewTEST() {
         // Arrange and Act
-        Restaurant steakEaters = new Restaurant("steakEaters", '$');
+        Restaurant steakEaters = new Restaurant("steakEaters", "$$$");
         Review review = new Review("Food tastes like burnt rubber", "Ricky Tanner", 1.5f, steakEaters);
         steakEaters.addReview(review);
         // Assert
@@ -27,7 +26,7 @@ class ReviewTest {
     @DisplayName("Star Rating Test")
     void starRatingTEST() {
         // Arrange and Act
-        Restaurant steakEaters = new Restaurant("steakEaters", '$');
+        Restaurant steakEaters = new Restaurant("steakEaters", "$");
         Review review1 = new Review("Food tastes like burnt rubber", "Ricky Tanner", 1.5f, steakEaters);
         steakEaters.addReview(review1);
 
