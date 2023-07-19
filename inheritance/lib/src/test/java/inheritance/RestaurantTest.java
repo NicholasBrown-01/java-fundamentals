@@ -1,5 +1,6 @@
 package inheritance;
 
+import inheritance.Businesses.Restaurant;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -7,18 +8,18 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class RestaurantTest {
     @Test
-    @DisplayName("Instantiate a New Restaurant")
+    @DisplayName("Instantiate/Create a New Instance of Restaurant")
     void createNewRestaurantTEST() {
         //Arrange
-        Restaurant sut = new Restaurant("Testing Name", '$');
+        Restaurant sut = new Restaurant("Wild Steaks", "$");
         //Act
         //Assert
         assertEquals(sut.getClass(), Restaurant.class);
-        assertEquals("Testing Name", sut.getName());
+        assertEquals("Wild Steaks", sut.getName());
 
         //Print for Visual
         System.out.println(sut);
-        System.out.println(sut.getName());
+        System.out.println("The Restaurant name is: "+sut.getName());
 
     }
 }

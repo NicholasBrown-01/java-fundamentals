@@ -1,5 +1,7 @@
 package inheritance;
 
+import inheritance.Businesses.Restaurant;
+
 public class Review {
     // Properties
     private String body;
