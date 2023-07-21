@@ -12,6 +12,8 @@ public class Restaurant extends BusinessBlueprint {
     public Restaurant(String name, String priceCategory) { // Must have these at a minimum just like the Parent
         super(name, priceCategory); // Talk to the Parent to set these values, and get ready to initialize everything else (starRating etc)
     }
+
+
 }
 
 
