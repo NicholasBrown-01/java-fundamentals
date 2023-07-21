@@ -13,6 +13,7 @@ public class Restaurant extends BusinessBlueprint {
         super(name, priceCategory); // Talk to the Parent to set these values, and get ready to initialize everything else (starRating etc)
     }
 
+
 }
 
 

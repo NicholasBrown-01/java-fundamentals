@@ -9,8 +9,9 @@ public class Shop extends BusinessBlueprint {
     public Shop() { super(); // Use the Parent's Constructor(super)
     }
 
-    public Shop(String name, String description, String priceCategory) { // Must have these at a minimum just like the Parent
-        super(name, priceCategory); // Talk to the Parent to set these values, and get ready to initialize everything else (starRating etc)
+    public Shop(String name, String description, String priceCategory) {
+        super(name, priceCategory);
+        this.description = description;
     }
 
     public String getDescription() {
@@ -25,8 +26,16 @@ public class Shop extends BusinessBlueprint {
     public String toString() {
         return "Shop{" +
                 "description='" + description + '\'' +
+                ", name='" + name + '\'' +
+                ", reviews=" + reviews +
+                ", starRating=" + starRating +
+                ", totalStarReviews=" + totalStarReviews +
+                ", avgStarRating=" + avgStarRating +
+                ", priceCategory='" + priceCategory + '\'' +
                 '}';
     }
 }
+
+
 
 

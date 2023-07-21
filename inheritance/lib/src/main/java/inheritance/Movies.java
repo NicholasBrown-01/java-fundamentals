@@ -1,50 +1,41 @@
-package inheritance;
-
-import inheritance.Businesses.Restaurant;
-
-public class Movies {
-    // Properties
-    private String title;
-    private String author;
-    public float stars;
-    public Restaurant restaurant;
-
-    //Constructor
-
-    public Movies(){
-    }
-
-    public Movies(String body, String author, float stars, Restaurant restaurant) {
-        this.body = body;
-        this.author = author;
-        this.stars = stars;
-        this.restaurant = restaurant;
-    }
-
-    // Getters and Setters
-
-    public String getBody() {
-        return body;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
-    public void setBody(String body) {
-        this.body = body;
-    }
-
-    @Override
-    public String toString() {
-        return "Review{" +
-                "body='" + body + '\'' +
-                ", author='" + author + '\'' +
-                ", stars=" + stars +
-                '}';
-    }
-}
+//package inheritance;
+//
+//import inheritance.Businesses.Restaurant;
+//import inheritance.ParentClass.BusinessBlueprint;
+//
+//public class Movies extends BusinessBlueprint {
+//    // Properties
+//    private String title;
+//
+//    //Constructor
+//
+//    public Movies() {
+//    }
+//
+//    public Movies(String title) {
+//        this.title = title;
+//    }
+//
+//    public Movies(String title) {
+//        this.title = title;
+//    }
+//
+//// Getters and Setters
+//
+//
+//    public String getTitle() {
+//        return title;
+//    }
+//
+//    public void setTitle(String title) {
+//        this.title = title;
+//    }
+//
+//    @Override
+//    public String toString() {
+//        return "Movies{" +
+//                "title='" + title + '\'' +
+//                '}';
+//    }
+//}
+//

@@ -7,19 +7,20 @@ public class Review {
     private String body;
     private String author;
     public float stars;
-    public Restaurant restaurant;
 
-    //Constructor
 
-    public Review (){
+    // ***Constructors*** //
+
+    public Review() {
     }
 
-    public Review(String body, String author, float stars, Restaurant restaurant) {
+
+    public Review(String body, String author, float stars) {
         this.body = body;
         this.author = author;
         this.stars = stars;
-        this.restaurant = restaurant;
     }
+
 
     // Getters and Setters
 
