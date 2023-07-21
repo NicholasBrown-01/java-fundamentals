@@ -16,13 +16,13 @@ class ReviewTest {
         Restaurant sut = new Restaurant("steakEaters", "$$$");
 
         //Act
-        Review review1 = new Review("Food tastes like burnt rubber", "Ricky Tanner", 2.5f);
+        Review review1 = new Review("Food tastes like burnt rubber", "Ricky Tanner","", 2.5f);
         sut.addReview(review1);
 
-        Review review2 = new Review("Wow oh WOW!", "Suzie Ann", 3.5f);
+        Review review2 = new Review("Wow oh WOW!", "Suzie Ann","", 3.5f);
         sut.addReview(review2);
 
-        Review review3 = new Review("Best leftovers I can throw up", "Rick Steel", 2.5f);
+        Review review3 = new Review("Best leftovers I can throw up", "Rick Steel","", 2.5f);
         sut.addReview(review3);
 
         // Assert

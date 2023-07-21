@@ -1,41 +1,37 @@
-//package inheritance;
-//
-//import inheritance.Businesses.Restaurant;
-//import inheritance.ParentClass.BusinessBlueprint;
-//
-//public class Movies extends BusinessBlueprint {
-//    // Properties
-//    private String title;
-//
-//    //Constructor
-//
-//    public Movies() {
-//    }
-//
-//    public Movies(String title) {
-//        this.title = title;
-//    }
-//
-//    public Movies(String title) {
-//        this.title = title;
-//    }
-//
-//// Getters and Setters
-//
-//
-//    public String getTitle() {
-//        return title;
-//    }
-//
-//    public void setTitle(String title) {
-//        this.title = title;
-//    }
-//
-//    @Override
-//    public String toString() {
-//        return "Movies{" +
-//                "title='" + title + '\'' +
-//                '}';
-//    }
-//}
-//
+package inheritance;
+
+
+public class Movies {
+    // Properties
+    private String movieTitle;
+
+
+    //Constructor
+
+    public Movies() {
+    }
+
+    public Movies(String movieTitle) {
+        this.movieTitle = movieTitle;
+    }
+
+// Getters and Setters
+
+
+    public String getMovieTitle() {
+        return movieTitle;
+    }
+
+    public void setMovieTitle(String movieTitle) {
+        this.movieTitle = movieTitle;
+    }
+
+    @Override
+    public String toString() {
+        return "Movies{" +
+                "movieTitle='" + movieTitle + '\'' +
+                '}';
+    }
+}
+
+

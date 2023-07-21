@@ -16,11 +16,11 @@ class ShopTest {
         Shop sut = new Shop("Gift Store Galore", "Cups, Magnets, and Tshirts", "$$");
 
         //Act
-        Review review1 = new Review("So much stuff I got Lost", "Jen Ableton", 5.0f);
+        Review review1 = new Review("So much stuff I got Lost", "Jen Ableton","", 5.0f);
         sut.addReview(review1);
-        Review review2 = new Review("They charged me to look at their mugs!!", "Jerid Dryer", 1.0f);
+        Review review2 = new Review("They charged me to look at their mugs!!", "Jerid Dryer","", 1.0f);
         sut.addReview(review2);
-        Review review3 = new Review("I got a gift card for a gift card!", "Heather Lonestar", 4.5f);
+        Review review3 = new Review("I got a gift card for a gift card!", "Heather Lonestar","", 4.5f);
         sut.addReview(review3);
 
         //Assert

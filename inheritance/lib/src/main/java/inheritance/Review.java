@@ -6,6 +6,7 @@ public class Review {
     // Properties
     private String body;
     private String author;
+    private String movieWatched;
     public float stars;
 
 
@@ -15,9 +16,10 @@ public class Review {
     }
 
 
-    public Review(String body, String author, float stars) {
+    public Review(String body, String author, String movieWatched, float stars) {
         this.body = body;
         this.author = author;
+        this.movieWatched = movieWatched;
         this.stars = stars;
     }
 
@@ -40,12 +42,22 @@ public class Review {
         this.body = body;
     }
 
+    public String getMovieWatched() {
+        return movieWatched;
+    }
+
+    public void setMovieWatched(String movieWatched) {
+        this.movieWatched = movieWatched;
+    }
+
     @Override
     public String toString() {
         return "Review{" +
                 "body='" + body + '\'' +
                 ", author='" + author + '\'' +
+                ", movieWatched='" + movieWatched + '\'' +
                 ", stars=" + stars +
                 '}';
     }
 }
+
